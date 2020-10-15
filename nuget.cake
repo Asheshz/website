@@ -84,7 +84,7 @@ public static void DownloadPackage(this ICakeContext context, DirectoryPath addi
                 context.EnsureDirectoryExists(directory);
 
                 using (System.IO.Stream source = entry.Open(),
-                                        target = context.FileSystem.GetFile(entryPath).OpenWrite())
+                                        target = context.FileSystem.GetFile(entryPath).OpenWrite());
                 {
                     source.CopyTo(target);
                 }
