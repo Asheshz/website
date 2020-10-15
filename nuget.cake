@@ -5,7 +5,7 @@
 using System.Net.Http;
 using Polly;
 
-public static void DownloadPackages(this ICakeContext context, DirectoryPath addinDir, string[] packageIds)
+public static void DownloadPackages(this ICakeContext context, DirectoryPath addinDir, string[] packageIds);
 {
     var retryPolicy = Policy
                         .Handle<Exception>()
